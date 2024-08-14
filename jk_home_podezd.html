@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <title>jk</title>
+</head>
+<body style="margin-top: 50px;">
+    <header>
+        <div class="top_menu menu">
+            <div class="container">
+                <div class="menu_title"></div>
+                <ul>
+                    <li><a href=""> О компании</a></li>
+                    <li><a href=""> Для партнеров</a></li>
+                    <li><a href=""> Акции</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container middle_menu menu">
+            <div class="logo">
+                <a href="/"><img src="img/logo.svg" alt="logo" title="СТС"></a>
+            </div>
+            <ul>
+                <li><a href=""> Проекты</a></li>
+                <li><a href=""> Квартиры</a></li>
+                <li><a href=""> Коттеджные поселки </a></li>
+                <li><a href=""> Ипотека</a></li>
+                <li><a href=""> Новости</a></li>
+                <li><a href=""> Контакты</a></li>
+            </ul>
+            <div class="tel_container">
+                <div class="like">
+                    <a href="">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.5826 1.38398C17.6375 0.461196 16.3319 0 14.665 0C14.2038 0 13.733 0.0799804 13.2532 0.239863C12.7732 0.399862 12.3267 0.615723 11.9141 0.887289C11.501 1.15878 11.146 1.41373 10.8481 1.65175C10.5517 1.88892 10.2685 2.14228 10 2.41067C9.73143 2.1423 9.44827 1.88894 9.1518 1.65175C8.85408 1.41373 8.4989 1.15893 8.08587 0.887289C7.67291 0.615606 7.22645 0.399902 6.74657 0.239863C6.26673 0.0800194 5.79603 0 5.33476 0C3.66803 0 2.36231 0.461313 1.4174 1.38398C0.472493 2.30657 0 3.58625 0 5.22315C0 5.72168 0.087564 6.23526 0.26234 6.76326C0.437116 7.29154 0.636285 7.74175 0.859456 8.1137C1.08259 8.48561 1.33562 8.8483 1.61837 9.20176C1.90112 9.55518 2.10775 9.79876 2.23781 9.93268C2.36798 10.0666 2.47032 10.1634 2.54471 10.223L9.5089 16.9418C9.64286 17.0757 9.80654 17.1429 9.99996 17.1429C10.1934 17.1429 10.3572 17.0757 10.4911 16.9418L17.4442 10.2451C19.1481 8.54151 20 6.8674 20 5.223C20 3.58598 19.5275 2.30641 18.5826 1.38398ZM16.4732 9.19617L10 15.4349L3.51577 9.18491C2.12436 7.79386 1.42878 6.47301 1.42878 5.223C1.42878 4.62041 1.50876 4.08834 1.66864 3.62714C1.82864 3.16587 2.03324 2.79931 2.28249 2.52775C2.53177 2.2561 2.83492 2.03492 3.19206 1.86367C3.54939 1.69256 3.89906 1.57721 4.24126 1.51771C4.58347 1.45829 4.94799 1.42854 5.33495 1.42854C5.7218 1.42854 6.13855 1.5233 6.58497 1.71309C7.03131 1.9028 7.44239 2.1409 7.81809 2.42732C8.19388 2.71394 8.51567 2.98175 8.78364 3.23091C9.05146 3.48032 9.27459 3.70896 9.45319 3.91731C9.58704 4.08107 9.76948 4.16292 10 4.16292C10.2307 4.16292 10.4129 4.08107 10.5469 3.91731C10.7255 3.70896 10.9488 3.4802 11.2166 3.23091C11.4844 2.98175 11.8063 2.71405 12.1819 2.42732C12.5577 2.1409 12.9688 1.9028 13.4153 1.71309C13.8616 1.52334 14.2785 1.42854 14.6654 1.42854C15.0522 1.42854 15.4167 1.45829 15.759 1.51771C16.1013 1.57717 16.451 1.69256 16.8082 1.86367C17.1654 2.03488 17.4685 2.25622 17.7177 2.52775C17.967 2.79931 18.1717 3.16587 18.3317 3.62714C18.4914 4.08834 18.5714 4.62041 18.5714 5.223C18.5713 6.47301 17.872 7.79753 16.4732 9.19617Z"
+                                fill="#EC7300" />
+                        </svg>
+                    </a>
+                    <span>2</span>
+                </div>
+                <div class="phone"><a href="tel:+74862630111">+7 (4862) 630-111</a></div>
+            </div>
+        </div>
+
+
+
+        <div class="mobile_menu d-none">
+            <ul class="mob_menu_list row">
+                <li class="mob_menu_item">
+                    <a href="">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_56_1520)">
+                                <path
+                                    d="M25.5777 2.35927C22.4319 -0.786423 17.3135 -0.786423 14.1677 2.35927C12.8634 3.6636 12.0642 5.31992 11.8566 7.14919C11.68 8.70612 11.9646 10.2928 12.6609 11.6836L0.0625 24.282L3.65502 27.8745L5.11842 26.4111L6.70734 28L10.1171 24.5903L8.52819 23.0013L9.69737 21.8322L11.2863 23.4211L14.6961 20.0113L13.1071 18.4224L16.2534 15.2761C17.6442 15.9723 19.2309 16.257 20.7878 16.0803C22.617 15.8727 24.2734 15.0736 25.5777 13.7693C28.7235 10.6236 28.7235 5.50502 25.5777 2.35927ZM24.4174 12.609C22.3143 14.7121 19.0733 15.1027 16.536 13.5587L15.9853 13.2236L10.7865 18.4224L12.3754 20.0113L11.2863 21.1005L9.69737 19.5115L6.20751 23.0013L7.79644 24.5903L6.70734 25.6794L5.11842 24.0905L3.65502 25.5539L2.38318 24.282L14.7134 11.9517L14.3783 11.401C12.8343 8.86365 13.2249 5.62273 15.328 3.51958C17.8339 1.01369 21.9114 1.01369 24.4174 3.51958C26.9234 6.02558 26.9234 10.1031 24.4174 12.609Z"
+                                    fill="#6F6F6F" />
+                                <path
+                                    d="M19.5301 4.60525C18.4822 5.65315 18.4822 7.35826 19.5301 8.40628C20.0541 8.93018 20.7423 9.19218 21.4306 9.19218C22.1188 9.19218 22.8071 8.93018 23.331 8.40622H23.3311C24.379 7.35826 24.379 5.65315 23.331 4.60525C22.2831 3.55734 20.578 3.55739 19.5301 4.60525ZM22.1708 7.24591C21.7626 7.65412 21.0985 7.65401 20.6905 7.24591C20.2823 6.83775 20.2823 6.17366 20.6904 5.76561C20.7876 5.66835 20.903 5.59123 21.03 5.53869C21.157 5.48615 21.2932 5.45923 21.4306 5.45947C21.6986 5.45947 21.9668 5.56148 22.1708 5.76556C22.5788 6.17372 22.5788 6.83775 22.1708 7.24591Z"
+                                    fill="#6F6F6F" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_56_1520">
+                                    <rect width="28" height="28" fill="#717171" />
+                                </clipPath>
+                            </defs>
+                        </svg>Проекты
+                    </a>
+                </li>
+                <li class="mob_menu_item">
+                    <a href="">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.47056 0H25.5294C26.8939 0 28 1.10611 28 2.47056V25.5294C28 26.8938 26.8939 27.9999 25.5294 27.9999H2.47056C1.10611 28 0 26.8939 0 25.5294V2.47056C0 1.10611 1.10611 0 2.47056 0ZM18.1176 9.05882H14.8235C14.3687 9.05882 14 8.69012 14 8.23528C14 7.78045 14.3687 7.41174 14.8235 7.41174H26.353V2.47056C26.353 2.01573 25.9843 1.64702 25.5294 1.64702H9.88236V8.23528C9.88236 8.69012 9.51366 9.05882 9.05882 9.05882C8.60398 9.05882 8.23528 8.69012 8.23528 8.23528V1.64708H2.47056C2.01573 1.64708 1.64702 2.01578 1.64702 2.47062V14H8.23528V13.1765C8.23528 12.7216 8.60398 12.3529 9.05882 12.3529C9.51366 12.3529 9.88236 12.7216 9.88236 13.1765V16.4706C9.88236 16.9254 9.51366 17.2941 9.05882 17.2941C8.60398 17.2941 8.23528 16.9254 8.23528 16.4706V15.647H1.64708V25.5294C1.64708 25.9842 2.01578 26.3529 2.47062 26.3529H8.23534V21.4117C8.23534 20.9569 8.60404 20.5882 9.05888 20.5882C9.51371 20.5882 9.88241 20.9569 9.88241 21.4117V26.3529H18.1177V22.2353H14.8236C14.3688 22.2353 14.0001 21.8666 14.0001 21.4117C14.0001 20.9569 14.3688 20.5882 14.8236 20.5882H18.1177V18.1176C18.1177 17.6628 18.4864 17.2941 18.9412 17.2941C19.3961 17.2941 19.7648 17.6628 19.7648 18.1176V26.3529H25.5295C25.9843 26.3529 26.353 25.9842 26.353 25.5294V9.05882H19.7647V13.1765C19.7647 13.6313 19.396 14 18.9412 14C18.4863 14 18.1176 13.6313 18.1176 13.1765V9.05882Z"
+                                fill="#6F6F6F" />
+                        </svg>Квартиры
+                    </a>
+                </li>
+                <li class="mob_menu_item">
+                    <a class="active" href="">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M28.6708 13.3905L16.8675 1.50943C16.8523 1.49414 16.8366 1.4793 16.8207 1.46491C15.5318 0.307687 13.5842 0.303552 12.2904 1.45534C12.2744 1.46967 12.2587 1.48445 12.2435 1.49963L0.332587 13.3871C-0.110229 13.8291 -0.110966 14.5463 0.331001 14.9892C0.773025 15.432 1.49027 15.4327 1.93302 14.9908L2.83203 14.0935V23.8744C2.83203 26.373 4.86474 28.4057 7.36328 28.4057H11.4414C12.0671 28.4057 12.5742 27.8985 12.5742 27.2729V18.0405H16.5391V27.2729C16.5391 27.8985 17.0462 28.4057 17.6719 28.4057H21.6367C24.1352 28.4057 26.168 26.373 26.168 23.8744C26.168 23.2488 25.6608 22.7416 25.0352 22.7416C24.4095 22.7416 23.9023 23.2488 23.9023 23.8744C23.9023 25.1237 22.886 26.1401 21.6367 26.1401H18.8047V16.9076C18.8047 16.282 18.2975 15.7748 17.6719 15.7748H11.4414C10.8157 15.7748 10.3086 16.282 10.3086 16.9076V26.1401H7.36328C6.11401 26.1401 5.09765 25.1237 5.09765 23.8744V11.8666C5.09765 11.8553 5.09748 11.844 5.09714 11.8328L13.8172 3.12992C14.0225 2.95547 14.2833 2.85995 14.5526 2.86052C14.822 2.86109 15.0824 2.95772 15.2869 3.13303L23.9023 11.8053V18.2104C23.9023 18.836 24.4095 19.3432 25.0352 19.3432C25.6608 19.3432 26.168 18.836 26.168 18.2104V14.0858L27.0636 14.9874C27.1687 15.0935 27.2939 15.1777 27.4319 15.2351C27.5698 15.2925 27.7178 15.322 27.8672 15.3218C28.1664 15.3221 28.4536 15.2037 28.6656 14.9926C29.1094 14.5516 29.1118 13.8344 28.6708 13.3905Z"
+                                fill="#6F6F6F" />
+                        </svg>Загородная
+                    </a>
+                </li>
+                <li class="mob_menu_item droplist">
+                    <a href="">
+                        <svg width="25" height="7" viewBox="0 0 25 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.125 0.375C1.40625 0.375 0 1.78125 0 3.5C0 5.21875 1.40625 6.625 3.125 6.625C4.84375 6.625 6.25 5.21875 6.25 3.5C6.25 1.78125 4.84375 0.375 3.125 0.375ZM21.875 0.375C20.1562 0.375 18.75 1.78125 18.75 3.5C18.75 5.21875 20.1562 6.625 21.875 6.625C23.5938 6.625 25 5.21875 25 3.5C25 1.78125 23.5938 0.375 21.875 0.375ZM12.5 0.375C10.7812 0.375 9.375 1.78125 9.375 3.5C9.375 5.21875 10.7812 6.625 12.5 6.625C14.2188 6.625 15.625 5.21875 15.625 3.5C15.625 1.78125 14.2188 0.375 12.5 0.375Z"
+                                fill="#6F6F6F" />
+                        </svg>Меню
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+    <div class="container">
+        <section class="chessContent">
+            <div id="step_chess">
+                <a href="" class="back"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="3" fill="#EC7300"/><path d="M20 8L12 16L20 24" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>Бульвар Героев, 2</a>
+                <div class="svgMap_container">
+                    <div class="row">
+                        <div class="variant">
+                            <div class="filter_item">
+                                <p class="name grey">Подъезд:</p>
+                                <select class="select select_type" name="type">
+                                    <option value="1" disabled selected>Выбрать подъезд</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <ul class="main_text">
+                                <li><span></span>Свободно</li>
+                                <li><span></span>Забронировано</li>
+                                <li><span></span>Продано</li>
+                            </ul>
+                        </div>
+                        <div class="chess">
+                            <h3>Подъезд 1</h3>
+                            <div class="vertical">
+                                <div class="horizont">
+                                    <div class="floor">18</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">17</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">16</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">15</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">14</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">13</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">12</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">11</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">10</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">9</div>
+                                    <a class="free" data-price="4362237" data-square="78.5">1</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">8</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">7</div>
+                                    <div class="sold"></div>
+                                    <a class="free" data-price="6366537" data-square="90.5">2</a>
+                                    <a class="free" data-price="7362453" data-square="95.5">2</a>
+                                    <a class="free" data-price="11232237" data-square="123.5">3</a>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">6</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">5</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">4</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">3</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">2</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <a class="free" data-price="7678978" data-square="107.5">2</a>
+                                    <div class="booked"></div>
+                                    <a class="free" data-price="4362237" data-square="77.5">c</a>
+                                    <a class="free" data-price="2369999" data-square="65.5">1</a>
+                                    <a class="free" data-price="4262547" data-square="87.5">1</a>
+                                    <a class="free" data-price="5364237" data-square="98.5">2 </a>
+                                </div>
+                                <div class="horizont">
+                                    <div class="floor">1</div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                    <div class="sold"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 202px;"></div>
+                    </div>
+
+                    <div class="container_btn">
+                        <div class="btn active">3D</div>
+                        <div class="btn">Схема</div>
+                    </div>
+
+                    <div class="appartament_infoblock d-none">
+                        <div class="price">от 4 362 237 ₽</div>
+                        <div class="row grey"><span>3-комн.</span><span>78.5м²</span><span>2 этаж из 8 </span></div>
+                    </div>
+                </div> 
+
+            </div>
+        </section>
+    </div>
+    <div class="follow-cursor"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
